@@ -81,7 +81,7 @@ class ApproximativeQAgent(CaptureAgent):
     #FUNCTIONS TO LOAD AND STORE THE UPDATED WEIGHTS INTO A FILE
     #IN THIS WAY THE OFFENSIVE AGENT WILL LEARN AT EACH GAME FROM THE UPDATED WEIGHTS 
     def load_file_weights(self):
-        weights_file = 'weights_offensive.json'
+        weights_file = 'weights_offensive_teamJN.json'
         if os.path.exists(weights_file):
             with open(weights_file, 'r') as file:
                 self.weights = json.loads(file.read())
@@ -90,7 +90,7 @@ class ApproximativeQAgent(CaptureAgent):
             self.save_weights()
 
     def save_weights(self):
-        weights_file = 'weights_offensive.json'
+        weights_file = 'weights_offensive_teamJN.json'
         with open(weights_file, 'w') as file:
             file.write(json.dumps(self.weights)) 
             
